@@ -3,9 +3,69 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Blagues de Chuck Norris</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/indexTop.css" />
+    <title>Générateur de recettes aléatoire</title>
   </head>
-  <body>
-    <h1>Blagues de Chuck Norris</h1>
+
+
+  <body onload="changeHeaderCss()">
+    <div id="page-bande">
+      <header id="header">
+        <h1><a href="index.html">Combinaison aléatoire</a></h1>
+          <a class="image-dropdown" onclick="showNavMobile()"></a>
+          <div id="dropdown-content">
+            <a href="index.html">Home</a>
+            <a href="html/topChoice.html">Top</a>
+            <a href="html/signUp.html" class="signUp">Sign Up</a>
+            <a href="html/logIn.html" class="logIn">Log In</a>
+            <a class="logOut" onclick="changeHeader()">Log Out</a>
+
+          </div>
+
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html/topChoice.html">Top</a></li>
+            <li class="signUp"><a href="html/signUp.html">Sign Up</a></li>
+            <li class="logIn"><a href="html/logIn.html">Log In</a></li>
+            <li class="logOut"><a href="" onclick="changeHeader()"> Log Out</a></li>
+          </ul>
+      </header>
+
+      <section id="banner" ontouchmove="notShowNavMobile()" ontouchstart="notShowNavMobile()">
+        <div class="inner">
+          <h2>Générateur de recettes aléatoire</h2>
+          <p>Application Web permettant à l'utilisateur de générer de manière catégorisé des plats, de voter pour ses combinaisons et de consulter les combinaisons les plus appréciées par la communauté. Ce travail a été effectué par Nguyen Trung et Pertuzati Gustavo. Lien vers le <a href="https://gitedu.hesge.ch/hoanhduc.nguyen/app-et-archi-web-tp-2020">git</a></p>
+          <li class="bouton primary" onclick="generateAction(0)"><button>Generate! </button> </li>
+        </div>
+      </section>
+
+      <section class="bande style1 special" ontouchmove="notShowNavMobile()" ontouchstart="notShowNavMobile()">
+        <div class="inner">
+            <h2>Catégories</h2>
+          <ul>
+            <li onclick="generateAction(1)"><button>Carnivore</button></li>
+            <li onclick="generateAction(2)"><button>Végétarien</button></li>
+            <li onclick="generateAction(3)"><button>Végan</button></li>
+          </ul>
+        </div>
+      </section>
+      <section id="recipes" class="bande alt style2" ontouchmove="notShowNavMobile()" ontouchstart="notShowNavMobile()"></section>
+    </div>
+
+    <footer id="footer" ontouchmove="notShowNavMobile()" ontouchstart="notShowNavMobile()">
+      <div class="copyright">
+        <h2>Contacts</h2>
+        <ul>
+          <li><a href="mailto:hoanh-duc-trung.nguyen@etu.hesge.ch">@hoanhduc.nguyen</a></li>
+          <li><a href="mailto:gustavo.pertuzati@etu.hesge.ch">@gustavo.pertuzat</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+    <script src="js/HeaderScript.js"></script>
+
   </body>
 </html>

@@ -1,0 +1,254 @@
+html, body, div,
+h1, h2, h3, p,
+ul, li,
+form, label,
+section{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+/* Basique */
+	@-ms-viewport {
+		width: device-width;
+	}
+	html {
+		box-sizing: border-box;
+		height: 100%;
+	}
+	*, *:after {
+		box-sizing: inherit;
+	}
+	body {
+		padding-bottom: 300px;
+		position: relative;
+		min-height: 100%;
+		background: #2e3842;
+	}
+	body, input, select, textarea {
+		color: #fff;
+		font-family: "Open Sans", Helvetica, sans-serif;
+		font-size: 15pt;
+		font-weight: 400;
+		letter-spacing: 0.075em;
+		line-height: 1.65em;
+	}
+	a {
+		border-bottom: dotted 1px;
+		color: inherit;
+	}
+	h1, h2, h3 {
+		color: #fff;
+		font-weight: 800;
+		letter-spacing: 0.225em;
+		line-height: 1em;
+		margin: 0 0 1em 0;
+		text-transform: uppercase;
+	}
+		h1 a, h2 a, h3 a{
+			color: inherit;
+			text-decoration: none;
+		}
+	h2 {
+		font-size: 1.35em;
+		line-height: 1.75em;
+	}
+		@media screen and (max-width: 736px) {
+			h2 {
+				font-size: 1.1em;
+				line-height: 1.65em;
+			}
+
+		}
+	h3 {
+		font-size: 1.15em;
+		line-height: 1.75em;
+	}
+		@media screen and (max-width: 736px) {
+			h3 {
+				font-size: 1em;
+				line-height: 1.65em;
+			}
+		}
+
+/* bouton */
+input[type="submit"],
+button,
+.bouton {
+	background-color: transparent;
+	border-radius: 3px;
+	border: 0;
+	color: #fff;
+	display: inline-block;
+	font-size: 0.8em;
+	font-weight: 600;
+	height: 3.125em;
+	letter-spacing: 0.225em;
+	line-height: 3.125em;
+	max-width: 30em;
+	padding: 0 2.75em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+.bouton.primary {
+	background-color: #ed4933;
+}
+
+@media screen and (max-width: 736px) {
+	input[type="button"],
+	bouton,
+	.bouton {
+		height: 3.75em;
+		line-height: 3.75em;
+	}
+}
+
+/* Header */
+#header {
+	background: #21b2a6 ;
+	height: 2.5em;
+	left: 0;
+	line-height: 3em;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+	#header h1 {
+		height: inherit;
+		left: 2em;
+		line-height: inherit;
+		position: absolute;
+		top: 0;
+	}
+		#header h1 a {
+			border: 0;
+			height: inherit;
+			line-height: inherit;
+		}
+			@media screen and (max-width: 736px) {
+				#header h1 a {
+					font-size: 0.8em;
+				}
+			}
+
+		#header ul {
+			color: rgba(255, 255, 255, 0.5);
+			background-color: #21b2a6;
+			flex-direction: row;
+			display: flex;
+			padding: 0;
+		}
+			#header ul > li {
+				border-top: solid 1px rgba(0, 0, 0, 0.125);
+				padding: 2em 1em 0em 1em;
+			}
+
+				#header ul > li > a {
+					border: 0;
+					color: inherit;
+					font-size: 0.8em;
+					letter-spacing: 0.225em;
+					text-decoration: none;
+					text-transform: uppercase;
+				}
+
+				#header ul > li > a:hover {
+					color: #fff;
+				}
+
+				.logOut {
+					display: none;
+				}
+				.signUp, .logIn{
+					display: flex;
+				}
+
+		.image-dropdown{
+			display: none;
+			background-image: url("../fig/bars.svg");
+			background-repeat: no-repeat;
+			height: 1em;
+			width: 1em;
+			border: 0;
+			margin: 1em 0em 0 0.7em;
+		}
+		#dropdown-content{
+			display: none;
+			background: #21b2a6;
+			left: 0;
+			top: 0;
+			width: 100%;
+			position: absolute;
+		}
+					@media screen and (max-width: 736px) {
+						#header > ul {
+							display: none;
+						}
+						.image-dropdown{
+							display: block;
+						}
+
+						#dropdown-content a{
+							border-top: solid 1px rgba(46,56,66,0.125);
+							text-decoration: none;
+			        display: block;
+							text-transform: uppercase;
+							border-bottom: none;
+							position: static;
+							padding-left: 5%;
+    				}
+					}
+
+/* Footer */
+
+	#footer {
+		height: 300px;
+		width: 100%;
+		padding: 6em 0 4em 0 ;
+		background-color: #21b2a6;
+		text-align: center;
+		bottom: 0;
+		position: absolute;
+	}
+
+		#footer .copyright {
+			color: rgba(255, 255, 255, 0.5);
+			font-size: 0.8em;
+			letter-spacing: 0.225em;
+			text-transform: uppercase;
+		}
+
+			#footer .copyright li {
+				border-left: solid 1px rgba(255, 255, 255, 0.5);
+				display: inline-block;
+				margin-left: 0em;
+				padding-left: 1em;
+				border: 0;
+			}
+
+				#footer .copyright li a {
+					color: inherit;
+					text-decoration: none;
+					border: 0;
+				}
+
+					#footer .copyright li a:hover {
+						color: #fff;
+					}
+
+		@media screen and (max-width: 736px) {
+			#footer {
+				padding: 3em 2em 1em 2em ;
+			}
+		}

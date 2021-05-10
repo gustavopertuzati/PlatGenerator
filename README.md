@@ -1,20 +1,6 @@
-# Travail Pratique
-
-**Ceci est le projet exemple** pour la réalisation du travail pratique (TP) et le dépôt Git de référence pour les étudiants. Il sera complété au fur et à mesure des notions enseignées pendant le cours.
-
-## Informations pour les étudiants
-
-**Le fork de ce repository doit contenir votre projet pour les cours qui sera évalué sur la partie frontend pour le cours Applications Web et la partie backend pour le cours Architectures Web. Pour la marche à suivre, veuillez vour référer au document nommé STUDENTS.md**
-
-Les critères d'évaluation sont explicités ici: https://gitedu.hesge.ch/jeremy.gobet/app-et-archi-web
-
-La suite contient la documentation du projet exemple que vous devez adapter et compléter pour le vôtre.
-
----
-
 ## Description du projet
 
-Ce projet est une application Web permettant à l'utilisateur de consulter les blagues de Chuck Norris, de voter pour ses blagues préférées et de consulter les blagues les plus appréciées par la communauté.
+Ce projet est une application Web permettant à l'utilisateur de générer de manière catégorisé des plats, de voter pour ses combinaisons et de consulter les combinaisons les plus appréciées par la communauté (cette dernière partie appartient au backend qui n'est pas implémenté).
 
 ### Réccupérer le projet
 
@@ -22,14 +8,20 @@ Le projet est disponible sur l'hébergement Git (gitedu.hesge.ch).
 
 Cloner le projet localement avec la commande git suivante:
 
-`git clone ssh://git@ssh.hesge.ch:10572/jeremy.gobet/app-et-archi-web-tp-2020.git`
+- **ssh**: `git clone ssh://git@ssh.hesge.ch:10572/hoanhduc.nguyen/app-et-archi-web-tp-2020.git`
+- **https**: `git clone https://gitedu.hesge.ch/hoanhduc.nguyen/app-et-archi-web-tp-2020.git`
 
 ### Structure
 
-Le projet contient deux dossiers:
+Le projet contient 2 dossiers:
 
-- **frontend**: Contient le site public
-- **backend**: Contient le serveur Node
+- **frontend**: contient le site public:
+    - **css**: contient un élément css
+    - **fig**: contient les figures nécessaires pour le css et html
+    - **html**: contient les pages htmls du site
+    - **js**: contient les scripts js pour l'utilisation des APIs publics et les animations du sites
+
+- **backend**: contient le serveur Node
 
 ### Démarrer le serveur
 
@@ -49,79 +41,50 @@ Démarrez le serveur Node
 
 Vous pouvez ensuite visualiser le site en local sur un navigateur: **localhost:8080**
 
+IMPORTANT: Certains navigateurs, tel que Chrome | Firefox, requiert l'installation d'une extension pour autoriser CORS.
+(pour Chrome: https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf)
+
 ### Stopper le server
 
 Pour stopper le serveur Node, utilisez la commande **CTRL + C**
 
 ### Architecture du projet
 
-              +------------+
-              |            |
-              |            |
-           +--+  Frontend  +--+
-           |  |            |  |
-           |  |            |  |
-           |  +------------+  |
-           |                  |
-           |                  |
-           |                  |
-           |                  |
-           v                  v
-    +-------------+    +-------------+
-    |     API     |    |     API     |
-    +-------------+    +-------------+
-    |             |    |             |
-    |   Backend   |    |    ICNDB    |
-    |   NODE.JS   |    |  API public |
-    |             |    |             |
-    +-------------+    +-------------+
+              +------------+               +------------+     
+              |            |               |            |
+              |            |               |            |
+              |  Frontend  +---------------|2 API PUBLIC|
+              |            |               |            |  
+              |            |               |            |
+              +------------+               +------------+
 
 - Frontend: Projet HTML5, CSS3, JS
-- Backend: Exposition d'une API REST sur NODE.JS pour la gestion des notations
-- ICNDB: API Rest public pour réccupérer les blagues de Chuck Norris (https://api.icndb.com)
+- RECIPE PUPPY: API Rest public pour réccupérer des recettes (http://www.recipepuppy.com/api/)
 
 ### Fonctionnalités
-
-Voici la liste des fonctionnalités de l'Application Web:
-
-- Récupération des blagues sur l'API public (non-implémenté)
-- Récupération des dernières blagues publiées (non-implémenté)
-- Gestion de la notation de blagues (non-implémenté)
-- Récupération des blagues les mieux notées par les utilisateurs (non-implémenté)
-- Récupération des blagues notées par un utilisateur (non-implémenté)
-
-L'application ne dispose pas d'une persistance de données. Une fois le serveur stoppé, toutes les données sont perdues.
-
-Une authentification sans mot de passe permet l'identification de l'utilisateur via l'utilisation de son adresse e-mail.
-
-### Interface REST API
-
-Voici l'API REST CRUD exposée par le backend
-
-| Verbe HTTP | Endpoint                 | Données     | Description |
-|:-----------|:-------------------------|:------------|:------------|
-| GET        | emails/                  |             | Retourne la liste des mails des utilisateurs |
-| GET        | evaluated-jokes/         |             | Retourne les blagues les mieux notées |
-| GET        | evaluated-jokes/*:email* | email*      | Retourne les blagues notées par l'utilisateur |
-| POST       | evaluated-jokes/         | email*, id* | Ajout d'une nouvelle note à la blague (id) |
-| PUT        | evaluated-jokes/         | email*, id* | Modification de la note de la blague (id) |
-| DELETE     | evaluated-jokes/         | email*, id* | Suppression de la note de la blague (id) |
-
-\* Obligatoire
+- génère aléatoirement les recettes et catégorise ou pas la génération.
 
 ### Contact
+
+#### Auteurs
+
+- Identifiant: @hoanhduc.nguyen
+- Mail: hoanh-duc-trung.nguyen@etu.hesge.ch
+
+- Identifiant: @gustavo.pertuzat
+- Mail: gustavo.pertuzati@etu.hesge.ch
 
 #### Assistant
 
 - Identifiant: @michael.minelli
 - Mail: michael-jean.minelli@hesge.ch
 
-#### Applications Web
+#### Professeur d'Applications Web
 
 - Identifiant: @jeremy.gobet
 - Mail: jeremy.gobet@hesge.ch
 
-#### Architectures Web
+#### Professeur d'Architectures Web
 
 - Identifiant: @stephane.malandai
 - Mail: stephane.malandain@hesge.ch
