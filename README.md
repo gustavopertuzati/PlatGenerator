@@ -64,6 +64,9 @@ Pour stopper le serveur Node, utilisez la commande **CTRL + C**
 ### Fonctionnalités
 - génère aléatoirement les recettes et catégorise ou pas la génération.
 
+### Inspiration du design du site
+- https://html5up.net/spectral
+
 ### Contact
 
 #### Auteurs
