@@ -11,6 +11,7 @@ Cloner le projet localement avec la commande git suivante:
 - **ssh**: `git clone ssh://git@ssh.hesge.ch:10572/hoanhduc.nguyen/app-et-archi-web-tp-2020.git`
 - **https**: `git clone https://gitedu.hesge.ch/hoanhduc.nguyen/app-et-archi-web-tp-2020.git`
 
+treung 
 ### Structure
 
 Le projet contient 2 dossiers:
