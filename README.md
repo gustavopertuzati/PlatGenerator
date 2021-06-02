@@ -4,7 +4,7 @@ Ce projet est une application Web permettant à l'utilisateur de générer de ma
 
 ### Réccupérer le projet
 
-Le projet est disponible sur l'hébergement Git (gitedu.hesge.ch).
+le projet est disponible sur l'hébergement Git (gitedu.hesge.ch).
 
 Cloner le projet localement avec la commande git suivante:
 
