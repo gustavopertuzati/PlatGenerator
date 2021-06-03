@@ -1,29 +1,32 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const bodyParser = require('body-parser');
-
+let app = express()
 
 const accessTokenSecret = 'wI6inac6mkSD9E-s5oiMNAgm2xaPVfUUax1anGzI0oLArAI4vWIMFkyeZQAZDjIGtQ';
 
-let app = express()
-app.use(bodyParser.json());
-app.use(express.static('../frontend'))
 
-app.get('/authentification', authenticateJWT, (req, res) => {
+app.use(express.json());
 
-});
+app.use(express.static('../frontend'));
 
 const authenticateJWT = (req, res, next) => {
-    const authHeader = req.headers.authorization;
-    if (authHeader) {
-        const token = authHeader.split(' ')[1];
-        jwt.verify(token, accessTokenSecret, (err, user) => {
-            if (err) return res.sendStatus(403);
-            req.user = user;
-            next();
-        });
-    }
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1] 
+    
+    if (token == null)  return res.sendStatus(401)
+
+    jwt.verify(token, accessTokenSecret, (err, user) => {
+        if (err) return res.sendStatus(403); //forbidden
+        req.user = user;
+        next();
+    });
 };
 
-app.listen(8080);
-console.log('Server started')
+app.get('/api/posts', authenticateJWT ,(req,res) => {
+    
+})
+
+app.listen(8080 , (req,res) => {
+    console.log('Server started on 8080')
+});
+

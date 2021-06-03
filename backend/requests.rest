@@ -1,0 +1,30 @@
+GET http://localhost:8080/api/posts
+Authorization: Bearer feQ_itHHXkuy4bU_Y6NtJgdJPt0n_rgEOoCkJGe7u_Agl-amMq2FUk6SjVQAv0myhQ
+
+###
+
+DELETE http://localhost:8081/api/logout 
+Content-Type: application/json
+
+{
+    "token": "wI6inac6mkSD9E-s5oiMNAgm2xaPVfUUax1anGzI0oLArAI4vWIMFkyeZQAZDjIGtQ"
+}
+
+###
+
+POST http://localhost:8081/api/token 
+Content-Type: application/json
+
+{
+    "token": "wI6inac6mkSD9E-s5oiMNAgm2xaPVfUUax1anGzI0oLArAI4vWIMFkyeZQAZDjIGtQ"
+}
+
+###
+POST http://localhost:8081/api/login
+Content-Type: application/json
+
+{
+    "email": "admin@test.com",
+    "pwd": "test"
+}
+
