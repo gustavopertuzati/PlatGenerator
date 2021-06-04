@@ -38,7 +38,7 @@
 
 
     <section ontouchmove="notShowNavMobile()" ontouchstart="notShowNavMobile()">
-      <form onsubmit="changeHeader(); return false" name="logIn" method="post">
+      <form onsubmit="handleSubmit()" name="logIn" method="post">
           <div>
               <label for="id-email"> E-mail </label>
               <input type="email" id="id_mail" name="user_email"/>
@@ -69,6 +69,7 @@
     </footer>
 
     <script src="../js/HeaderScript.js"></script>
+    <script src="../js/HandleSubmit.js"></script>
   </body>
 
 </html>

@@ -1,6 +1,7 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-let app = express()
+const changeHeaderFunction = require('../frontend/js/HeaderScript');
+let app = express();
 
 const accessTokenSecret = 'wI6inac6mkSD9E-s5oiMNAgm2xaPVfUUax1anGzI0oLArAI4vWIMFkyeZQAZDjIGtQ';
 
@@ -23,8 +24,9 @@ const authenticateJWT = (req, res, next) => {
 };
 
 app.get('/api/posts', authenticateJWT ,(req,res) => {
-    
-})
+    /*changeHeaderFunction.changeHeader();
+    changement header, liens à faire avec le frontend ici*/
+});
 
 app.listen(8080 , (req,res) => {
     console.log('Server started on 8080')

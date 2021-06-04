@@ -51,3 +51,5 @@ function setHeader()
     localStorage.setItem('logOut', false);
   }
 }
+
+module.exports = {changeHeader};

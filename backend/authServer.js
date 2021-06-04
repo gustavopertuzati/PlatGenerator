@@ -30,7 +30,7 @@ app.post('/api/token' ,(req, res) => {
 });
 
 app.delete('/api/logout', (req, res) => {
-    refreshTokens = refreshTokens.filter(token => t !== token);
+    refreshTokens = refreshTokens.filter(token => token !== token);
     res.send("Logout successful");
 });
 
