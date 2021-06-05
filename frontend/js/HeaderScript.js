@@ -52,4 +52,3 @@ function setHeader()
   }
 }
 
-module.exports = {changeHeader};
