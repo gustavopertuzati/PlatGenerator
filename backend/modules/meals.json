@@ -1,9 +1,1 @@
-{"test@hesge.ch":[
-    1,2,3
-  ],
-"gustavo@hesge.ch":[
-    3,5,7
-],
-"trung@hesge.ch":[
-    4,7,3
-]}
+{"content":[{"userEmail":"test@hesge.ch","likes":[{"href":"https://www.allrecipes.com/gallery/southern-picnic-side-dish-recipes/","note":4},{"href":"https://www.allrecipes.com/gallery/summer-foods-southerners-look-forward-to/","note":1},{"href":"https://www.allrecipes.com/gallery/southern-grandma-desserts/","note":4},{"href":"https://www.allrecipes.com/gallery/southern-grandmother-potluck-recipes/","note":1}]},{"userEmail":"gustavo@hesge.ch","likes":[{"href":"","note":3},{"href":"","note":5},{"href":"","note":0},{"href":"","note":4},{"href":"","note":1}]},{"userEmail":"trung@hesge.ch","likes":[{"href":"","note":2},{"href":"","note":3},{"href":"","note":2},{"href":"","note":4},{"href":"","note":1}]}]}

@@ -1,30 +1,66 @@
-GET http://localhost:8080/api/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNjIyODAwMjQ3LCJleHAiOjE2MjI4MDA4NDd9.PgdVlOs9tlumyz5Jy30xCCMsggmdo0CeUOIzUiyUFws
+GET http://localhost:8081/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNjIzOTY1NDMwLCJleHAiOjE2MjM5NjYwMzB9.KfJLY6GqjK-0drUN0RjC_gX4_ljbKA_Ru3sE32JHzDs
 
 ###
 
-DELETE http://localhost:8080/api/logout 
+DELETE http://localhost:8081/api/logout 
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNjIyOTA2MzQwLCJleHAiOjE2MjI5MDY5NDB9.OQ52n7WonKwfjR6OY5doQq8txuFtyEs-tSJ5I7Ep8b0"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNjIzOTY1Mzk0fQ.NQhTnPsl_sWKcCVhKOPfwgP4DqYKpKA2g_PyodD_9Pg"
 }
 
 ###
 
-POST http://localhost:8080/api/token 
+POST http://localhost:8081/api/token 
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNjIyOTA2MzIzfQ.29eEZ3BSd-VY_qDNA_sj97Db3088VVcVeOFtwKbQpRU"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNjIzOTY1Mzk0fQ.NQhTnPsl_sWKcCVhKOPfwgP4DqYKpKA2g_PyodD_9Pg"
 }
 
 ###
-POST http://localhost:8080/api/login
+POST http://localhost:8081/api/login
 Content-Type: application/json
 
 {
     "email": "admin@test.com",
     "pwd": "test"
 }
+
+###
+GET http://localhost:8080/api/v1/topChoice/get/test@hesge.ch/5
+
+###
+POST http://localhost:8080/api/v1/topChoice/post
+Content-Type: application/json
+
+{
+    "userEmail": "test@hesge.ch",
+    "href": "test2",
+    "note": 2
+}
+
+###
+PUT http://localhost:8080/api/v1/topChoice/put
+Content-Type: application/json
+
+{
+    "userEmail": "test@hesge.ch",
+    "href": "test2",
+    "note": 5
+}
+
+###
+DELETE http://localhost:8080/api/v1/topChoice/delete/
+Content-Type: application/json
+
+{
+    "userEmail": "test@hesge.ch",
+    "href": "test2"
+}
+
+ 
+
+
 

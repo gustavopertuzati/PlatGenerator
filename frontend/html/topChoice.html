@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/indexTop.css" />
     <title>Générateur de recettes aléatoire</title>
   </head>
 
@@ -27,7 +27,9 @@
           <li class="logOut"><a href="" onclick="changeHeader()"> Log Out</a></li>
         </ul>
     </header>
-
+    <div>
+      <section id="recipes" class="bande alt style2" ontouchmove="notShowNavMobile()" ontouchstart="notShowNavMobile()"></section>
+    </div>
     
 
     <footer id="footer" ontouchmove="notShowNavMobile()" ontouchstart="notShowNavMobile()">
@@ -41,5 +43,6 @@
     </footer>
 
     <script src="../js/HeaderScript.js"></script>
+    <script src="../js/topChoice.js"></script>
   </body>
 </html>
