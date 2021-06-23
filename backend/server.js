@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { response } = require('express');
 const db = require('./modules/db')
+var cors = require('cors')
 
 let app = express();
 app.use(express.static('../frontend'));
@@ -9,8 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-
-//const meals = require('./modules/db.js');
+app.use(cors())
 
 app.listen(8080);
 console.log('Server started');
@@ -73,6 +73,7 @@ app.put('/api/v1/topChoice/put/', (req, res) => {
 });
 
 app.delete('/api/v1/topChoice/delete', (req, res) => {
+
   if(req.body.userEmail !== undefined && req.body.href !== undefined) {
     if (!db.deleteLikedMeal(req.body.userEmail, req.body.href)){
       res.status(204).end();

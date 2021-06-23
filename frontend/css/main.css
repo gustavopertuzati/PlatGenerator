@@ -78,6 +78,10 @@ ol, ul {
 			}
 		}
 
+.others {
+	color:black
+}
+
 /* bouton */
 input[type="submit"],
 button,

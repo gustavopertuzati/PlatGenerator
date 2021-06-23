@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../css/indexTop.css" />
+    <link rel="stylesheet" href="../css/main.css" />
     <title>Générateur de recettes aléatoire</title>
   </head>
 
   <body onpageshow="changeHeaderCss()">
+    <div id="page-bande"></div>
     <header id="header">
       <h1><a href="../index.html">Combinaison aléatoire</a></h1>
         <a class="image-dropdown" onclick="showNavMobile()"></a>
@@ -27,7 +29,6 @@
           <li class="logOut"><a href="" onclick="changeHeader()"> Log Out</a></li>
         </ul>
     </header>
-    <div>
       <section id="recipes" class="bande alt style2" ontouchmove="notShowNavMobile()" ontouchstart="notShowNavMobile()"></section>
     </div>
     

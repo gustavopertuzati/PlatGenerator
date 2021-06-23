@@ -9,6 +9,9 @@ section.special {
 	text-align: center;
 }
 
+select.form-control {
+	color: white;
+}
 
 /* Premier Plan */
 .premier_plan {
