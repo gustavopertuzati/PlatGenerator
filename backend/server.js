@@ -10,11 +10,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
 app.use(cors())
 
 app.listen(8080);
 console.log('Server started');
 
+/*
+* Documentation de l'API
+*/
 app.get('/api', function(req, res) {
   response.setHeader('Content-Type', 'text/plain');
   response.send(`
@@ -44,8 +48,8 @@ app.get('/api/v1/topChoice/get/:userEmail/:limit?', (req, res) => {
 });
 
 /*
-* Route permettant à l'utilisateur de liker une recette
-* paramètres: 
+* Route permettant à l'utilisateur d'aimer une recette
+* paramètres: le mail de l'utilisateur, l'url de la recette, la note attribuée
 */
 app.post('/api/v1/topChoice/post/', (req, res) => {
   if(req.body.userEmail !== undefined && req.body.href !== undefined && req.body.note !== undefined){
@@ -59,8 +63,11 @@ app.post('/api/v1/topChoice/post/', (req, res) => {
   }
 });
 
+/*
+* Route permettant à l'utilisateur de changer une note de ces favoris
+* paramètres: le mail de l'utilisateur, l'url de la recette, la nouvelle note attribuée
+*/
 app.put('/api/v1/topChoice/put/', (req, res) => {
-  
   if(req.body.userEmail !== undefined && req.body.href !== undefined && req.body.note !== undefined) {
     if (!db.putLikedMeal(req.body.userEmail, req.body.href, req.body.note)){
       res.status(204).end();
@@ -72,8 +79,11 @@ app.put('/api/v1/topChoice/put/', (req, res) => {
   }
 });
 
+/*
+* Route permettant à l'utilisateur de supprimer une recette de ces favoris
+* paramètres: le mail de l'utilisateur, l'url de la recette
+*/
 app.delete('/api/v1/topChoice/delete', (req, res) => {
-
   if(req.body.userEmail !== undefined && req.body.href !== undefined) {
     if (!db.deleteLikedMeal(req.body.userEmail, req.body.href)){
       res.status(204).end();

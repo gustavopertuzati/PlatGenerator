@@ -33,6 +33,7 @@ Accédez au dossier contenant le serveur Node
 
 Installez les dépendances
 
+`npm install cors --save`
 `npm install`
 
 Démarrez le serveur Node
@@ -59,10 +60,16 @@ Pour stopper le serveur Node, utilisez la commande **CTRL + C**
               +------------+               +------------+
 
 - Frontend: Projet HTML5, CSS3, JS
-- RECIPE PUPPY: API Rest public pour réccupérer des recettes (http://www.recipepuppy.com/api/)
+- RECIPE PUPPY: API Rest public pour réccupérer des recettes (http://www.recipepuppy.com/api/)(ne fonctionne plus)
 
 ### Fonctionnalités
 - génère aléatoirement les recettes et catégorise ou pas la génération.
+
+### Jwt
+- Pour démarer le serveur d'authentification
+`node jwtserveur.js`
+
+Les requêtes sont présentes dans le fichier requests.rest, Il est nécessaire que nous possédez l'extension rest afin de pouvoir utilisez ce fichier.
 
 ### Inspiration du design du site
 - https://html5up.net/spectral

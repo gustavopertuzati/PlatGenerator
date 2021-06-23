@@ -1,4 +1,4 @@
-GET http://localhost:8081/api/posts
+GET http://localhost:8081/api/connectRessource
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQHRlc3QuY29tIiwiaWF0IjoxNjIzOTY1NDMwLCJleHAiOjE2MjM5NjYwMzB9.KfJLY6GqjK-0drUN0RjC_gX4_ljbKA_Ru3sE32JHzDs
 
 ###

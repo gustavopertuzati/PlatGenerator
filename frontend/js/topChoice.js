@@ -43,7 +43,6 @@ async function get(limit)
             divRecipe.setAttribute("class", "content");
             divSelect.setAttribute("class", "image");
             select.setAttribute("name", "choice");
-            
             optionDefault.setAttribute("value", element.note);
             optionDefault.setAttribute("class", "others");
             optionDefault.setAttribute("selected", "");
